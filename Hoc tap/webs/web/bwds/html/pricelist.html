@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/pricelist.css">
+    <link rel="stylesheet" href="../css/reponsiveIndex.css">
+    <link rel="stylesheet" href="../js/base.js">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="../img/logo.webp" alt="">
+        </div>
+        <ul class="header-list">
+            <li class="header-item">
+                <a href="../html/index.html">Giới thiệu</a>
+            </li>
+            <li class="header-item">
+                <a href="../html/pricelist.html">Bảng giá</a>
+            </li>
+            <li class="header-item">
+                <a href="../html/porduct.html">Đặt hàng</a>
+            </li>
+            <li class="header-item">
+                <a href="">Giỏ hàng</a>
+            </li>
+            <li class="header-item">
+                <a href="">Liên hệ</a>
+            </li>
+        </ul>
+        <div class="header-btn">
+            <a href="../html/register.html" class="header-btn__register">Đăng kí</a>
+            <a href="../html/login.html" class="header-btn__login">Đăng nhập</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">
+            BẢNG GIÁ DỊCH VỤ
+        </h2>
+        <div class="section-description">Bảng giá được công bố rõ ràng, công khai và nhất quán với hệ thống phần mềm.
+            <br> Tuyệt đối không có giá ảo, chi phí phát sinh.
+        </div>
+
+        <div class="box-price__wrap">
+            <div class="box-price__order">
+                <h3 class="box-price__title">
+                    BÁO GIÁ ORDER
+                    <span>(ĐHQC mua, kiểm hàng, vận chuyển về VN)</span>
+                    <div class="box-xien"></div>
+                    <div class="box-cheo"></div>
+
+                </h3>
+                <div class="box-price__content">
+                    <div class="box-price__step">
+                        <img src="../img/step.png" alt="">
+                        <div>
+                            <span class="box-price__step--item">TIỀN HÀNG TRÊN WEB</span>
+                            <span class="box-price__step--item"> PHÍ SHIP TRUNG QUỐC</span>
+                            <span class="box-price__step--item">PHÍ GIAO DỊCH</span>
+                            <span class="box-price__step--item">CƯỚC VẬN CHUYỂN</span>
+                        </div>
+                    </div>
+                    <div class="box-price__pay">
+                        <span class="box-price__pay--title">
+                            Số tiền phải thanh toán =
+                        </span>
+                        <span class="box-price__pay--step">1</span> +
+                        <span class="box-price__pay--step">2</span> +
+                        <span class="box-price__pay--step">3</span> +
+                        <span class="box-price__pay--step">4</span>
+                    </div>
+                    <div class="box-price__fee">
+                        <span class="box-price__fee--number">1</span>
+                        <span class="box-price__fee--title">TIỀN HÀNG TRÊN WEB:</span>
+                        <div class="box-price__fee--subtitle">Giá sản phẩm niêm yết trên website</div>
+                    </div>
+                    <div class="box-price__fee">
+                        <span class="box-price__fee--number">2</span>
+                        <span class="box-price__fee--title">PHÍ SHIP TRUNG QUỐC:</span>
+                        <div class="box-price__fee--subtitle">Phí vận chuyển từ người bán tới kho hàng tại Trung quốc</div>
+                    </div>
+                    <div class="box-price__fee">
+                        <span class="box-price__fee--number">3</span>
+                        <span class="box-price__fee--title">PHÍ GIAO DỊCH:</span>
+                        <div class="box-price__fee--subtitle">Áp dụng theo bảng phí dưới đây</div>
+                    </div>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Cấp độ</th>
+                                <th>Tổng tiền đơn mỗi tháng</th>
+                                <th>Phí dịch vụ (% giá trị đơn)</th>
+                                <th>Tiền cọc (% giá trị đơn)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cấp 1</td>
+                                <td>Từ 0 đến 50tr</td>
+                                <td>5%</td>
+                                <td>50%</td>
+                            </tr>
+                            <tr>
+                                <td>Cấp 2</td>
+                                <td>Từ 51tr đến 200tr</td>
+                                <td>4%</td>
+                                <td>50%</td>
+                            </tr>
+                            <tr>
+                                <td>Cấp 3</td>
+                                <td>Trên 200tr</td>
+                                <td>3%</td>
+                                <td>50%</td>
+                            </tr>
+                            <tr>
+                                <td>Cấp 4</td>
+                                <td>Liên hệ</td>
+                                <td>1%</td>
+                                <td>50%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="box-price__fee">
+                        <span class="box-price__fee--number">4</span>
+                        <span class="box-price__fee--title">CƯỚC VẬN CHUYỂN CÂN NẶNG:</span>
+                        <div class="box-price__fee--subtitle">Áp dụng theo mức phí dưới đây</div>
+                    </div>
+                    <div class="box-price__list">
+                        <div class="box-price__list--title">
+                            Bảng giá Chuyển Phát Nhanh:
+                        </div>
+                        <div class="box-price__list--subtitle">
+                            Thời gian hàng về Hà Nội từ 03-05 ngày, thời gian hàng về TP.HCM từ 04-06 ngày trong điều kiện thông quan bình thường.
+                        </div>
+                        <div class="box-price__list--table">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Tổng cân nặng mỗi tháng </th>
+                                        <th>Về HN(đ/kg)</th>
+                                        <th>Về SG(đ/kg)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dưới 150kg</td>
+                                        <td>31.500</td>
+                                        <td>39.500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Từ 150kg đến 2000kg</td>
+                                        <td>30.500</td>
+                                        <td>38.500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Trên 2000kg </td>
+                                        <td>29.500</td>
+                                        <td>37.500</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="box-price__list--note">
+                            (*) Chúng tôi chỉ tính chi phí cho hàng về đến kho của Công Ty tại Hà Nội hoặc TP.HCM, khách hàng sẽ đến kho lấy hoặc sẽ tự thanh toán thêm tiền vận chuyển từ kho về nhà.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box-price__ship">
+                <h3 class="box-price__title">
+                    BÁO GIÁ VẬN CHUYỂN HÀNG KÝ GỬI-SHIP HỘ
+                    <span>(Khách tự chuyển hàng về kho Quảng Châu)</span>
+                    <div class="box-xien"></div>
+                    <div class="box-cheo"></div>
+                </h3>
+                <div class="box-price__ship--content">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tổng cân nặng mỗi tháng </th>
+                                <th>Về HN(đ/kg)</th>
+                                <th>Về SG(đ/kg)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dưới 150kg</td>
+                                <td>32.700</td>
+                                <td>40.700</td>
+                            </tr>
+                            <tr>
+                                <td>Từ 150kg đến 2000kg</td>
+                                <td>31.700</td>
+                                <td>37.700</td>
+                            </tr>
+                            <tr>
+                                <td>Trên 2000kg </td>
+                                <td>30.700</td>
+                                <td>38.700</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__order">
+            <div class="order-logo">
+                <img src="../img/logo.webp" alt="">
+            </div>
+            <div class="order-group">
+                <div class="order-group__icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>
+                        Việt Nam
+                    </span>
+                </div>
+
+            </div>
+            <div class="order-group">
+                <div class="order-group__icon">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                        0327650231
+                    </span>
+                </div>
+
+            </div>
+            <div class="order-group">
+                <div class="order-group__icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>
+                        levanduygv2003@gmail.com
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="info-title">
+                THÔNG TIN DỊCH VỤ
+            </div>
+            <div class="info-title_link">
+                <a href="">Bảng giá</a>
+            </div>
+            <div class="info-title_link">
+                <a href="">Hướng dẫn mua hàng</a>
+            </div>
+            <div class="info-title_link">
+                <a href="">Quy định chính sách</a>
+            </div>
+        </div>
+        <div class="footer__interactive">
+            <div class="interactive-title">
+                TƯƠNG TÁC VỚI CHÚNG TÔI
+            </div>
+            <div class="interactive-img">
+                <a href="">
+                    <img src="../img/158819636_210388397536347_8508734940577392647_n.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="mobiel-menu">
+        <div class="mobiel-menu__top">
+            <div class="menu__top-img">
+                <img src="../img/br-nav-slide-left.webp" alt="">
+            </div>
+            <div class="menu__top-info">
+                <div class="menu__top-info--img">
+                    <img src="../img/av-none-user.webp" alt="">
+                </div>
+                <div class="menu__top-info--title">
+                    Xin chào
+                </div>
+                <div class="menu__top-info--subtitle">
+                    Chào mừng quý khách đến với <br> Order-Hang-Nhập hàng trung quốc
+                </div>
+            </div>
+            <div class="mobile__top--icon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="mobie-center">
+            <ul class="mobie-center__list">
+                <li class="mobie-center__title">
+                    <div href="" class="mobie-center__title--first">Tất cả danh mục</div>
+                </li>
+                <li class="mobie-center__title">
+                    <a href="../html/index.html">Trang chủ</a>
+                </li>
+                <li class="mobie-center__title">
+                    <a href="../html/pricelist.html">Bảng giá</a>
+                </li>
+                <li class="mobie-center__title">
+                    <a href="">Công cụ đặt hàng</a>
+                </li>
+                <li class="mobie-center__title">
+                    <a href="">Hướng dẫn</a>
+                </li>
+                <li class="mobie-center__title">
+                    <a href="">liên hệ</a>
+                </li>
+                <li class="mobie-center__title">
+                    <a href="../html/register.html">Đăng kí</a>
+                </li>
+                <li class="mobie-center__title">
+                    <a href="../html/register.html">Đăng nhập</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

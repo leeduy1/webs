@@ -1,0 +1,100 @@
+{
+  "user": [
+    {
+      "fullname": "danhhuy",
+      "email": "levanduygv2003@gmail.com",
+      "phone": "12345",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 1
+    },
+    {
+      "fullname": "van duy",
+      "email": "levanduygv2003@gmail.com",
+      "phone": "123459",
+      "password": "1234567",
+      "password_confirmation": "1234567",
+      "id": 2
+    },
+    {
+      "fullname": "luan",
+      "email": "levanduygv2003@gmail.com",
+      "phone": "123",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 3
+    },
+    {
+      "fullname": "phi",
+      "email": "phi@gmail.com",
+      "phone": "123",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 4
+    },
+    {
+      "fullname": "yến ly",
+      "email": "ly@gmail.com",
+      "phone": "012345677",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 5
+    },
+    {
+      "fullname": "luan",
+      "email": "luananccac@gmail.com",
+      "phone": "123123123",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 6
+    },
+    {
+      "fullname": "ho minh phi",
+      "email": "phiho@gmail.com",
+      "phone": "12312321312",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 7
+    },
+    {
+      "fullname": "lê Văn Duy",
+      "email": "duylv@gmail.com",
+      "phone": "02313123",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 8
+    },
+    {
+      "fullname": "1",
+      "email": "123@gmail.com",
+      "phone": "2133",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 9
+    },
+    {
+      "fullname": "2",
+      "email": "2@gmail.com",
+      "phone": "2",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 10
+    },
+    {
+      "fullname": "3",
+      "email": "3@gmail.com",
+      "phone": "1234312312",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 11
+    },
+    {
+      "fullname": "levanduy",
+      "email": "duylv@gmail.com",
+      "phone": "123456",
+      "password": "123456",
+      "password_confirmation": "123456",
+      "id": 12
+    }
+  ]
+}

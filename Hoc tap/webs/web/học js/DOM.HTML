@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">HTML DOM</h1>
+
+    <script>
+        // 1. getElementsById   trả về element
+        // 2. getElementsByClassName  trả về giống mảng  (html collection(img,a,..))
+        // 3. getElementsByTagName    trả về giống mảng
+        // 4. querySelector       trả về elemnt
+        // 5. querySelectorAll     trả về NodeList
+        var headingNode = document.getElementById('heading');
+        // console.log({
+        //     element: headingNode
+        // })
+        var heading1 = document.getElementsByTagName('h1')
+        console.log(heading1)
+    </script>
+
+</body>
+
+</html>

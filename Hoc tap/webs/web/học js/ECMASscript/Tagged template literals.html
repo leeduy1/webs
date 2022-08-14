@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function highlight([first, ...strings], ...value) {
+            return value.reduce(
+                    (acc, curr) => [...acc, `<span>${curr}</span>`, strings.shift()], [first]
+                )
+                // .join();
+
+        }
+
+        var brand = 'F8';
+        var course = 'Javascript';
+
+        const html = highlight `Học lập trình ${course} tại ${brand}!`;
+        console.log(html);
+    </script>
+
+</body>
+
+</html>

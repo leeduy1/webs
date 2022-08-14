@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+</head>
+<body>
+    <!-- <script>
+        const h1DOM = document.createElement("h1");
+
+        h1DOM.title  = 'Hello'
+        h1DOM.className = 'heading'
+
+        h1DOM.innerText = 'Hello guys!'
+
+        document.body.appendChild(h1DOM)
+
+        
+        const h1React = React.createElement('h1', {
+            title: 'Hello',
+            className: 'Heading'
+        }, 'Hello guys')
+    </script> -->
+
+    <script>
+        const ulDOM = document.createElement('ul')
+
+        const liDom1 = document.createElement('li')
+        liDom1.innerText = 'JavaScript'
+
+        const liDom2 = document.createElement('li')
+        liDom2.innerText = 'ReactJS'
+
+        ulDOM.appendChild(liDom1)
+        ulDOM.appendChild(liDom2)
+
+        document.body.appendChild(ulDOM)
+
+
+        const ulReact = React.createElement(
+            'ul', 
+            null,
+            React.createElement('li', null, 'javascript'),
+            React.createElement('li', null, 'ReactJS')
+        )
+    </script>
+</body>
+</html>

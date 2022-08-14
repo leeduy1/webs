@@ -1,0 +1,55 @@
+#dautrang {
+    text-align: center;
+    border: #FF8C00 solid 5px;
+    color: #FF8C00;
+}
+
+.Chuk {
+    font-size: 20px;
+}
+
+big {
+    font-size: 50px;
+    color: #B22222;
+}
+
+#giuatrang {
+    background-color: #FF8C00;
+}
+
+#giuatrang h2 {
+    text-align: right;
+    color: #fff;
+}
+
+.quocgia {
+    color: #B22222;
+}
+
+span {
+    background-color: #FFD700;
+}
+
+table,
+tr,
+td {
+    border: 1px solid #FFA500;
+    text-align: center;
+}
+
+.head-table {
+    text-align: center;
+    background-color: red;
+    color: #fff;
+}
+
+.dongdau {
+    text-align: center;
+    color: #B22222;
+}
+
+.left {
+    text-align: left;
+}
+
+table {}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #8cc84c;
+        }
+
+        .wrapper {
+            background-color:white;
+            border-radius: 10px;
+            width: 400px;
+            padding:20px;
+        }
+        .title {
+            font-size: 22px;
+        }
+
+        .content {
+            border:1px solid #888;
+            padding:10px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            border-radius:5px;
+        }
+
+        .content li {
+            background-color: green;
+            color: white;
+            border-radius: 3px;
+            list-style: none;
+            margin: 4px 3px;
+            padding: 10px;
+        }
+
+        .content li i {
+            font-size: 16px;
+            margin-left: 5px;
+        }
+
+        .content input {
+            border: none;
+            outline: none;
+            font-size: 18px;
+            margin: 10px 0 10px;
+            flex: 1;
+        }
+
+        .remove-all {
+            background-color: #8cc84c;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color:white;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="title">Search Tags</h2>
+        <div class="content">
+            <input type="text" placeholder="Type and Enter">
+        </div>
+        <button class="remove-all">Remove all</button>
+    </div>
+    <script>
+        var content = document.querySelector('.content')
+        var input = document.querySelector('.content input')
+        var removeAll = document.querySelector('.remove-all')
+
+        var tags = ['NodeJs', 'ReactJs']
+
+        function render() {
+            content.innerHTML = ''
+            for(let i = 0; i < tags.length; i++) {
+                const tag = tags[i];
+                content.innerHTML += `
+                    <li>
+                        ${tag}
+                        <i class="fas fa-times" onclick = "removeTag(${i})"></i>
+                    </li>
+                `
+            }
+            content.appendChild(input)
+            input.focus();
+        }
+
+        render()
+
+        input.addEventListener("keydown",function(e) {
+            if(e.key == 'Enter') {
+                tags.push(input.value.trim());
+                input.value = ''
+                render()
+            }
+        } )
+
+        function removeTag(index) {
+            tags.splice(index, 1)
+            render()
+        }
+
+        removeAll.addEventListener('click', function() {
+            tags = []
+            render();
+        })
+      
+    </script>
+</body>
+</html>

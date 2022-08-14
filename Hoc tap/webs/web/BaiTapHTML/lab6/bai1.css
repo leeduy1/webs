@@ -1,0 +1,115 @@
+.form-register {
+    margin-left: 530px;
+    width: 420px;
+    background-image: linear-gradient(rgb(250, 250, 250), rgb(240, 240, 248));
+    padding-left: 12px;
+    padding-right: 0px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+h1 {
+    color: #1c1e21;
+    font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+p {
+    color: #1c1e21;
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 12px 0;
+}
+
+input {
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 11px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.name1,
+.name2 {
+    width: 170px;
+    margin-bottom: 12px;
+}
+
+.name1 {
+    margin-right: 8px;
+}
+
+.contact,
+.newPassword {
+    width: 375px;
+}
+
+.contact {
+    margin-bottom: 12px;
+}
+
+.newPassword {
+    margin-bottom: 12px;
+}
+
+select {
+    width: 80px;
+    height: 26px;
+    margin-right: 6px;
+    font-size: 13px;
+}
+
+.date {
+    margin-bottom: 08px;
+}
+
+a {
+    font-size: 13px;
+    color: #385898;
+    text-decoration: none;
+}
+
+.dateTime a {
+    margin-right: 30px;
+}
+
+.dateTime {
+    display: flex;
+    align-items: center;
+}
+
+.sex {
+    margin: 16px 0;
+    font-size: 18px;
+    display: flex;
+}
+
+.sex div {
+    margin-right: 16px;
+}
+
+.messeage {
+    font-size: 13px;
+}
+
+button {
+    background-color: #00a400;
+    border-radius: 6px;
+    box-shadow: none;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    padding: 0 32px;
+    height: 32px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #067806;
+}

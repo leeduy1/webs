@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+
+            //Post Item
+            function PostItem({
+                image,
+                title,
+                description,
+                publishedAt,
+            }) {
+                return (
+                        <div className="post-item">
+                          
+                            <img src={image} alt=""/>
+                            <h2 className = "post-title">{title}</h2>
+                            <p className = "post-desc">{description}</p>
+                            <p className = "post-published">{publishedAt}</p>
+                        </div>
+                )
+            }
+
+
+            function App() {
+
+                return (
+
+                    <div id="wrapper">
+                        <PostItem
+                            image="https://files.fullstack.edu.vn/f8-prod/blog_posts/3589/628c631e0479a.jpg"
+                            title="Áo Polo F8 Đã Về! Trên Tay Áo Polo F8 Của F8"
+                            description="Chào các bạn! Như các bạn đã biết, mình rất hay mặc áo Polo F8 trong các video chia sẻ học lập trình miễn phí tại F8. Tại phần bình luận của mỗi bài học, khá nhiều bạn cũng mong muốn được khoác lên mình màu áo F8 này."
+                            publishedAt="Mình xin phép trích dẫn một vài bình luận:"
+                        />
+                    </div>
+                )
+            }
+
+            
+
+    
+
+            ReactDOM.render(<App />,document.getElementById('root'));
+        </script>
+    </body>
+</html>

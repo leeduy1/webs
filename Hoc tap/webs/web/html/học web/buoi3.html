@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        a:hover {
+            color: red;
+        }
+        
+        a:visited {
+            color: yellow;
+        }
+        
+        #tb {
+            border: 10px solid #00BB00;
+            width: 500px;
+            overflow: auto;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid red;
+            border-collapse: collapse;
+            text-align: center;
+            /*chữ ra giữa */
+            vertical-align: middle;
+            padding: 6px;
+        }
+        
+        table {
+            width: 700px;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #33FF99;
+        }
+        
+        table tr:nth-child(odd) {
+            background-color: #FF9966;
+        }
+        
+        table th {
+            background-color: #339966;
+        }
+        
+        table TR:hover {
+            background-color: #AAAA;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- _blank mở lên tab mơi, self mở lên tab hiện hành 
+          visited đã cick valf link và đi đến trang đích
+          hover: di chuyển qua link
+          active: link đã đc kích hoạt
+    -->
+    <a href="https://meet.google.com/vqz-pxgu-phy" target="_blank" download="">Chuyển trang Google meet</a>
+    <!-- <table border="1" align="center" cellspacing="20" cellspadding="10">
+        <tr>
+            <td bgcolor="red" valign="middle" align="center" colspan="3">THÔNG TIN</td>
+        </tr>
+        <tr>
+            <td>SJC 1L,2L</td>
+            <td>6 800 000</td>
+            <td>6 900 000</td>
+        </tr>
+        <tr>
+            <td rowspan="2" valign="bottom">Vàng nhẫn</td>
+            <td>6 800 000</td>
+            <td>6 800 000</td>
+        </tr>
+        <tr>
+
+            <td>5800 000</td>
+            <td>5800 000</td>
+                cellspacing: thiết lập khoảng cách giữa các đường viên
+                 cellspađing: thiết lập khoảng cách vùng đệm bên trong các ô
+           
+        </tr>
+    </table>  -->
+    <div id="tb">
+        <table>
+            <caption>Thông tin sinh viên</caption>
+            <tr>
+                <th>HỌ TÊN</th>
+                <th>QUÊ QUÁN</th>
+                <th>NGÀY SINH</th>
+                <th>QUỐC TỊCH</th>
+                <th>SỐ ĐIỆN THOẠI</th>
+            </tr>
+            <tr>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+            </tr>
+            <tr>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+            </tr>
+            <tr>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+            </tr>
+            <tr>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+            </tr>
+            <tr>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+                <td>ABC 123</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="a" class="a" type="text">
+    <input id="b" class="b" type="text">
+    <script>
+        function bai1() {
+            var x = parseInt(document.getElementById("a").value);
+            var y = parseInt(document.getElementById("b").value);
+
+            if (x % y == 0)
+                alert('true');
+            else
+                alert('false');
+        }
+    </script>
+    <button onclick={bai1()}>Chia het</button>
+</body>
+
+</html>

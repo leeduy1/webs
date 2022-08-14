@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <img src="../img/bgsignup.ecccf8a0.png" alt="">
+
+        <form action="" method="POST" class="form" id="form-1">
+            <h3 class="heading">Thành viên đăng ký</h3>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="fullname" class="form-label">Tên đầy đủ</label>
+                <input id="fullname" name="fullname" type="text" placeholder="VD: Nguyễn Danh Huy" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="form-label">Số điện thoại</label>
+                <input id="phone" name="phone" type="text" placeholder="Số điện thoại" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <button class="form-submit">Đăng ký</button>
+            <p class="info-msg">Bạn đã có tài khoản <a href="../html/login.html" class="info-link">Đăng nhập</a></p>
+        </form>
+
+    </div>
+
+    <script src="../js/validator.js"></script>
+
+    <script>
+        //mong muốn của chúng ta
+        var courseApi = "http://localhost:3000/user"
+
+        function Redirect() {
+            window.location = "../html/login.html";
+        }
+        Validator({
+            form: '#form-1',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+                Validator.isRequired('#email', 'Vui lòng nhập trường này'),
+                Validator.isEmail('#email', 'Trường này phải là email'),
+                Validator.isRequired('#phone', 'Vui lòng nhập trường này'),
+                Validator.minLength('#password', 6, 'Vui lòng nhập tối thiểu 6 kí tự'),
+                Validator.isRequired('#password_confirmation'),
+                Validator.isConfirmed('#password_confirmation', function() {
+                    return document.querySelector('#form-1 #password').value;
+                }, 'Mật khẩu nhập lại không chính xác')
+            ],
+            onSubmit: function(data) {
+                var options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data),
+                }
+                fetch(courseApi, options)
+                    .then(function(reponse) {
+                        reponse.json();
+                    })
+                alert('Đăng kí thành công')
+            }
+        });
+    </script>
+
+</body>
+
+</html>

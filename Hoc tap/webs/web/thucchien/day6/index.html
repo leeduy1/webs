@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: #17a2b8;
+            color: white;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alert {
+            font-size: 40px;
+            color: #17a2b8;
+            background-color: white;
+            border-radius:12px;
+            padding: 10px 40px;
+            border: none;
+            outline:none;
+            
+        }
+
+        
+
+        .box .result{
+            height:250px;
+            width:250px;
+            border: 7px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+            margin: auto;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px;
+
+            
+        }
+
+       .detail{
+            display:flex
+       }
+
+        .card p {
+            padding: 10px;
+            text-align: center;
+            color: black;
+            font-size: 20px;
+
+        }
+
+        .card p:first-child {
+            background-color: #78c0c9;
+            color:white;
+        }
+
+        .hide {
+            display: none;
+        }
+    </Style>
+</head>
+<body>
+    <button class="alert ">Press Any Key</button>
+    <div class="box hide">
+        <div class="result ">32</div>
+        <div class="detail">
+            <div class="card key">
+                <p>Key</p>
+                <p>0</p>
+            </div>
+            <div class="card location">
+                <p>Location</p>
+                <p>0</p>
+            </div>
+            <div class="card which">
+                <p>Which</p>
+                <p>0</p>
+            </div>
+            <div class="card code">
+                <p>Code</p>
+                <p>0</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var eKey = document.querySelector('.card.key p:last-child')
+        var eLocation = document.querySelector('.card.location p:last-child')
+        var eWhich = document.querySelector('.card.which p:last-child')
+        var eCode = document.querySelector('.card.code p:last-child')
+        var alert = document.querySelector('.alert')
+        var box = document.querySelector('.box')
+
+        var result = document.querySelector('.result')
+
+
+
+
+        document.addEventListener('keydown', e=>{
+            eKey.innerText = e.key
+            eLocation.innerText = e.location
+            eWhich.innerText = e.which
+            eCode.innerText = e.code
+
+            result.innerText = e.code
+
+            alert.classList.add('hide')
+            box.classList.remove('hide');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="form__register">
+        <div class="form__header-register">
+            <span class="form__header-register-msg">Đăng ký</span>
+            <!-- <div class="form__qr">
+                <div class="form__qr-heading">
+                    Đăng nhập với mã<br>QR
+                </div>
+                <a href="" class="">
+                    <svg width="40" height="40" fill="none" class="form__qr-img"><g clip-path="url(#clip0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 0H0v18h18V0zM3 15V3h12v12H3zM18 22H0v18h18V22zm-3 15H3V25h12v12zM40 0H22v18h18V0zm-3 15H25V3h12v12z" fill="#EE4D2D"></path><path d="M37 37H22.5v3H40V22.5h-3V37z" fill="#EE4D2D"></path><path d="M27.5 32v-8h-3v8h3zM33.5 32v-8h-3v8h3zM6 6h6v6H6zM6 28h6v6H6zM28 6h6v6h-6z" fill="#EE4D2D"></path><path fill="#fff" d="M-4.3 4l44 43.9-22.8 22.7-43.9-44z"></path></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h40v40H0z"></path></clipPath></defs></svg>
+                </a>
+            </div> -->
+        </div>
+        <div class="form__container">
+            <div id="form-1">
+                <div class="form__group">
+                    <input id="fullname" type="text" class="form__group-input" placeholder="Họ tên">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form__group">
+                    <input id="email" type="email" class="form__group-input" placeholder="Email">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form__group">
+                    <input id="username" type="text" class="form__group-input" placeholder="Tên đăng nhập">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form__group">
+                    <input id="password" type="password" class="form__group-input" placeholder="Mật khẩu">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form__group">
+                    <input id="password_confirmation" type="password" class="form__group-input" placeholder="Nhập lại mật khẩu">
+                    <span class="form-message"></span>
+                </div>
+            </div>
+            <button class="form__button">
+                ĐĂNG KÝ
+            </button>
+            <!-- <div class="form__msg">
+                <a href="" class="form__msg-content">Quên mật khẩu</a>
+                <a href="" class="form__msg-content">Đăng nhập với SMS</a>
+            </div> -->
+            <div class="form__or">
+                <div class="form__or-brick">
+
+                </div>
+                <span>HOẶC</span>
+                <div class="form__or-brick">
+
+                </div>
+            </div>
+            <div class="form__socials">
+                <button class="form__socials-fb">
+                    <i class="fa-brands fa-facebook form__socials--icon"></i>
+                    <span>Facebook</span>
+                </button>
+                <button class="form__socials-gg">
+                    <i class="fa-brands fa-google form__socials--icon"></i>
+                    <span>Google</span>
+                </button>
+            </div>
+
+            <div class="form__tail">
+                <p>Bạn đã có tài khoản? </p>
+                <a href="">  Đăng nhập</a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/validator.js"></script>
+    <script>
+        Validator({
+            form: '#form-1',
+            formGroupSelector: '.form__group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname'),
+                Validator.isEmail('#email'),
+                Validator.isRequired('#username'),
+                Validator.minLength('#password', 6),
+                Validator.isRequired('#password_confirmation'),
+                Validator.isConfirmed('#password_confirmation', function() {
+                    return document.querySelector('#form-1 #password').value;
+                }, 'Mật khẩu nhập lại không chính xác')
+            ],
+
+        });
+    </script>
+</body>
+
+</html>

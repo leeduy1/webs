@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .content {
+            text-align: center;
+            width: 944px;
+        }
+        
+        h1 {
+            font-weight: 500;
+        }
+        
+        .btn--input {
+            width: 620px;
+            height: 50px;
+            font-size: 17px;
+        }
+        
+        .form__input--password {
+            margin-top: 28px;
+        }
+        
+        .form__input {
+            margin-top: 80px;
+        }
+        
+        .form__btn {
+            margin-top: 80px;
+        }
+        
+        .form__btn--log-in,
+        .form__btn--account {
+            color: #fff;
+            border: none;
+            border-radius: solid 2px black;
+            cursor: pointer;
+        }
+        
+        .form__btn--log-in {
+            background-color: #FF0000;
+            margin-bottom: 16px;
+        }
+        
+        .form__btn--account {
+            background-color: black;
+            margin-top: 16px;
+            margin-bottom: 40px;
+        }
+        
+        span::after,
+        span::before {
+            content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+            text-decoration: line-through;
+        }
+        
+        p {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div form-login>
+            <H1>Đăng nhập</H1>
+        </div>
+        <div class="form__input">
+            <div class="form__account">
+                <input class="btn--input" type="text" placeholder="Tài khoản Garena, Email hoặc số điện thoại">
+            </div>
+            <div class="form__account form__input--password">
+                <input class="btn--input" type="text" placeholder="Mật khẩu">
+            </div>
+        </div>
+        <div class="form__btn">
+            <div>
+                <button class="btn--input form__btn--log-in ">Đăng Nhập Ngay</button>
+            </div>
+            <span> hoặc </span>
+            <div>
+                <button class="btn--input form__btn--account">Tạo tài khoản mới</button>
+            </div>
+        </div>
+        <div>
+            <p>Quên mật khẩu ?</p>
+        </div>
+    </div>
+</body>
+
+</html>

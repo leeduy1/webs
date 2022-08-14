@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <div class="main">
+        <img src="../img/bgsignup.ecccf8a0.png" alt="">
+
+        <form action="" method="POST" class="form" id="form-2">
+            <img class="form-logo" src="../img/vSHuYeE.png" alt="">
+            <h3 class="heading">Đăng nhập</h3>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+
+            <button class="form-submit">Đăng nhập</button>
+            <p class="info-msg">Bạn chưa có tài khoản <a href="../html/register.html" class="info-link">Đăng kí</a></p>
+
+        </form>
+
+    </div>
+    <script src="../js/validator.js"></script>
+
+    <script>
+        var courseApi = "http://localhost:3000/user"
+
+        function Redirect() {
+            window.location = "../html/index.html";
+        }
+        Validator({
+            form: '#form-2',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#email', 'Vui lòng nhập trường này'),
+                Validator.isEmail('#email', 'Trường này phải là email'),
+                Validator.minLength('#password', 6, 'Vui lòng nhập tối thiểu 6 kí tự'),
+            ],
+            onSubmit: function(data) {
+                fetch(courseApi)
+                    .then(function(reponse) {
+                        return reponse.json();
+                    })
+                    .then(function(users) {
+                        // console.log(users);
+                        var dem = 0;
+                        users.forEach(function(user) {
+                            if (user.email == data.email && user.password == data.password) {
+                                // Redirect();
+                                dem++;
+                            }
+                        })
+                        if (dem !== 0) {
+                            alert('Đăng nhập thành công')
+
+                            Redirect();
+                        } else {
+                            alert('Email hoặc mật khẩu không chính xác')
+                        }
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>

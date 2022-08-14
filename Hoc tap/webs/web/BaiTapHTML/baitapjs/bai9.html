@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1. Mở trang https://quantrimang.com</li>
+        <li>2. Mở trang https://download.com.vn</li>
+        <li>3. Mở trang https://vndoc.com</li>
+        <li>Ấn bất kì. Mở trang https://vndoc.com</li>
+
+    </ul>
+    <label>
+        Nhập lựa chọn của bạn
+    </label>
+    <input class="input" type="text">
+    <button class="enter">Enter</button>
+    <script>
+        var input = document.querySelector('.input')
+        var enter = document.querySelector('.enter')
+        
+        enter.onclick = function() {
+            if(input.value == 1) {
+                window.open('https://quantrimang.com')
+            } else if(input.value == 2) {
+                window.open('https://download.com.vn')
+            } else if(input.value == 3) {
+                window.open('https://vndoc.com')
+            } else {
+                window.open('https://meta.vn')
+            }
+        } 
+    </script>
+</body>
+</html>

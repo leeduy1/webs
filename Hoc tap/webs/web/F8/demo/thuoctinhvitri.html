@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+        
+        h1 {
+            /* vị trí tương đối có thể thay đổi nhưng giữ nguyên tất cả các cái khác */
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        
+        .box {
+            width: 100%;
+            height: 120px;
+            background-color: #333;
+            position: relative;
+        }
+        
+        .header {
+            width: 100%;
+            height: 42px;
+            background-color: #333;
+            position: fixed;
+        }
+        
+        .box-child {
+            /* width: 50px;
+            height: 50px; */
+            background-color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Position</h1>
+    <div class="header"></div>
+    <div class="box">
+        <div class="box-child"></div>
+    </div>
+
+    <ul>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+    </ul>
+</body>
+
+</html>

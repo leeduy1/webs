@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background:linear-gradient(to right, #4daf54, #3d8880);
+        }
+
+        .search-box {
+            position: relative;
+            height:70px;
+            width: 70px;
+            border-radius:15px;
+            overflow:hidden;
+            transition: all 0.5s ease;
+            background-color:#242628;
+
+        }
+
+        .search-box__input{
+            width: 100%;
+            height: 100%;
+            border:none;
+            outline: none;
+            background-color:transparent;
+            color: white;
+            font-size:30px;
+            padding: 20px 100px 20px 35px;
+        }
+
+        .search-box__btn{
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            border: none;
+            outline: none;
+            top: 0;
+            right: 0;
+            overflow:hidden;
+            font-size: 30px;
+        }
+
+        .open {
+            width: 420px;
+        }
+    </style>
+</head>
+<body>
+   <div class="search-box">
+        <input type="text" class="search-box__input">
+        <button class="search-box__btn">
+            <i class="fas fa-search"></i>
+        </button>
+   </div>
+   <script>
+        var btnSeach = document.querySelector('.search-box__btn')
+        btnSeach.addEventListener('click',function() {
+            this.closest('.search-box').classList.toggle('open')
+           // document.querySelector('.search-box__input').focus();
+           this.previousElementSibling.focus();
+        })
+   </script>
+</body>
+</html>

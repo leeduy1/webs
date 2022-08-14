@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- API (URL) -> Application porogaming inter -->
+
+    <!-- cổng giao tiếp giữa các PM -->
+
+    <!-- Backend -> API(URL) -> Fetch -> JSON/XML -->
+    <!-- -> JSON.parse -> javascript types -->
+    <!-- Render ra giao diện vơi HTML -->
+    <ul id="post-block"></ul>
+    <script>
+        var postApi = 'https://jsonplaceholder.typicode.com/todos/1';
+
+
+        fetch(postApi)
+            .then(function(reponse) {
+                return reponse.json();
+                // JSON.parse: JSON -> javascript types
+            })
+            .then(function(posts) {
+                var htmls = posts.map(function(post) {
+                    return `<li> 
+                        <h2> ${post.title}</h2> 
+                        <p> ${post.body} </p> 
+                    </li>`;
+                })
+                var html = htmls.join('');
+                document.getElementById('post-block').innerHTML = html
+            })
+    </script>
+</body>
+
+</html>

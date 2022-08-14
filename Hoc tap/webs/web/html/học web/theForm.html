@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="index.php" method="post">
+        <table>
+            <label for="">Tên đăng nhập:</label>
+            <input type="text" name="" size="50" minlength="6" maxlength="12" required><br>
+            <label for="">Nhập mật khẩu:</label>
+            <input type="password" name="" size="50"><br>
+            <label for="">Giới tính:</label><br>
+            <!-- chỉ chọn 1 phải đặt chung name -->
+            <label for="">Nam</label><input type="radio" name="gioitinh" value=""><br>
+            <label for="">Nữ</label><input type="radio" name="gioitinh" value=""><br>
+            <label for="">Sở thích:</label><br>
+            <label for="">Đá bóng</label><input type="checkbox" name="dabong">
+            <label for="">chơi game</label><input type="checkbox" name="choigame">
+            <label for="">Đi du lịch</label><input type="checkbox" name="didulich"><br>
+            <label for="">Bạn thích màu gì</label><input type="color" name="mycolor"><br>
+            <label for="">Ngày sinh:</label><input type="date" name="ngaysinh" value="29-03-2022" min="01-01-2018" max="29-03-2022"><br>
+            <label for="">Nhập địa chỉ email:</label><input type="email" name="email" pattern=".+@globex\.com" size="30"><br>
+            <label for="">Chọn file</label><input type="file" accept="image/png, image/jpeg, image/gif"><br>
+            <input type="image" name="btimg" alt="Login" src="img/btimg.png"><br>
+            <label for="">Tuổi:</label><input type="number" name="number" min="16" max="100"><br>
+            <label for="">Âm lượng</label><input type="range" name="amluong" min="0" max="100"><br>
+            <label for="">Tìm Kiếm</label><input type="search" name="search"><br>
+            <label for="">Số điện thoại</label><input type="tel" name="tel" pattern="[0-9]{4}-[0-9]{3}"><br>
+            <label for="">Nhập địa chỉ website</label><input type="url" name="" placeholder="https://example.com"><br>
+            <input type="reset" name="reset" value="Nhập lại">
+            <input type="submit" name="submit" value="Đăng ký">
+        </table>
+        <label for="">Chọn quốc gia</label>
+        <input type="text" name="" list="quocgia">
+        <datalist id="quocgia">
+            <option value="Việt Nam">
+            <option value="Hàn Quốc">
+            <option value="Hoa Kỳ">
+            <option value="Nhật Bản">
+        </datalist>
+    </form>
+</body>
+
+</html>

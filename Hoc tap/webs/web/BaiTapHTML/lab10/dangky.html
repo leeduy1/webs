@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="trangchu.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__logo">
+                <img src="./img/Screenshot 2022-06-11 132528.png" alt="">
+            </div>
+            <ul class="header__list">
+                <li class="header__item">Trang chủ</li>
+                <li class="header__item">Giới thiệu</li>
+                <li class="header__item specialized-news">
+                    Tin chuyên ngành
+                    <ul class="specialized-news__list">
+                        <li class="specialized-news__item">
+                            TIN HOẠT ĐỘNG
+                        </li>
+                        <li class="specialized-news__item">
+                            AN NINH TRẬT TỰ
+                        </li>
+                        <li class="specialized-news__item">
+                            TUYÊN TRUYỀN PHÁP LUẬT
+                        </li>
+                        <li class="specialized-news__item">
+                            TIN AN TOÀN GIAO THÔNG
+                        </li>
+                        <li class="specialized-news__item">
+                            TOÀN DÂN BẢO VỆ ANTQ
+                        </li>
+                        <li class="specialized-news__item">
+                            CẢI CÁCH HÀNH CHÍNH
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__item">Văn bản pháp quy</li>
+                <li class="header__item">Thủ tục hành chính</li>
+                <li class="header__item">Liên hệ</li>
+            </ul>
+        </div>
+        <div class="container">
+            
+            <div class="container__body">
+                <div class="form__img">
+                    <img src="./img/Screenshot 2022-06-11 145528.png" alt="" >
+                </div>
+                <form class="form" id="form__register">
+                    <h3 class="heading">Đăng ký tài khoản</h3>
+                    <div class="form-group">
+                        <label for="fullname" class="form-label">Họ và tên</label>
+                        <input id="fullname" name="fullname" type="text" class="form-control" style="margin-left: 60px">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="user" class="form-label">Tên người dùng *</label>
+                        <input id="user" name="user" type="text" class="form-control" style="margin-left: 3px">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="form-label">Mật khẩu *</label>
+                        <input id="password" name="password" type="password" class="form-control" style="margin-left: 52px">
+                        <span class="form-message"></span>
+                    </div>
+                    <button class="form-submit">Gửi</button>
+                </form>
+            </div>
+            <div class="container__img">
+                <img src="./img/Hộp thư tố giác tội phạm (1).jpg" alt="">
+                <img src="./img/lldb.jpg" alt="">
+                <img src="./img/hoi-dap.png" alt="">
+                <img src="./img/vi-pham-giao-thong.png" alt="">
+                <img style="width: 272px" src="./img/DVC TP DA NANG.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="Validator.js"></script>
+    <script>
+        Validator({
+            form: '#form__register',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+                Validator.isRequired('#user', 'Vui lòng nhập trường này'),
+                Validator.minLength('#password', 6, 'Vui lòng nhập tối thiểu 6 kí tự'),
+                Validator.capitalFirst('#password', 'Mật khẩu phải gồm các ký tự chữ cái, chữ số, ký tự đặc biệt, dấu chấm, bắt đầu bằng ký tự in hoa'),
+                Validator.specialCharacters('#password', 'Mật khẩu phải gồm các ký tự chữ cái, chữ số, ký tự đặc biệt, dấu chấm, bắt đầu bằng ký tự in hoa '),
+                Validator.number('#password', 'Mật khẩu phải gồm các ký tự chữ cái, chữ số, ký tự đặc biệt, dấu chấm, bắt đầu bằng ký tự in hoa '),
+                Validator.alphabeticCharacters('#password', 'Mật khẩu phải gồm các ký tự chữ cái, chữ số, ký tự đặc biệt, dấu chấm, bắt đầu bằng ký tự in hoa ')
+            ],
+            onSubmit: function(data) {
+
+            }
+        });
+    </script>
+   
+</body>
+</html>

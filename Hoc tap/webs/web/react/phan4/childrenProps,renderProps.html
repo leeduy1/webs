@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+</head>
+<body>
+    <div id="root"></div>
+
+
+    <!-- <script type="text/babel">
+        function Input({label, ...inputProps}) {
+            return (
+                <div>
+                    <label>{label}</label>
+                    <input {...inputProps}/>
+                </div>
+            )
+        }
+
+        function App() {
+            return (
+                <div id="wrapper">
+                    <Input
+                        label="full name"
+                        type="radio"
+                        placeholder="Enter name..."
+                        title="Day la input"
+                        onFocus={() => {
+                            console.log(Math.random())
+                        }}
+
+                    />
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App/>, document.getElementById('root'));
+
+    </script> -->
+
+    <!-- <script type="text/babel">
+
+        function Button({children}) {
+            return <button>{children}</button>
+        }
+
+        function App() {
+            return (
+                <div id="wrapper">
+                    <Button>Click me!</Button>
+                    
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App/>, document.getElementById('root'));
+
+    </script> -->
+
+    <script type="text/babel">
+
+        function List({data, children}) {
+            return (
+                <ul>
+                    {data.map((item,index) => children(item,index))}
+                </ul>
+            )
+        }
+
+        const cars  = ['BMW', 'Honda', 'Mazda']
+
+        function App() {
+            return (
+                <div id="wrapper">
+                    <List data={cars}>
+                        {(item,index) => <li key={index}>{item}</li>}
+                    </List>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App/>, document.getElementById('root'));
+
+    </script>
+</body>
+</html>

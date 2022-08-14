@@ -1,0 +1,189 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    width: 100%;
+}
+
+.banner__img img {
+    width: 100%;
+    position: relative;
+}
+
+.banner__img input {
+    position: absolute;
+    top: 100px;
+    right: 60px;
+}
+
+.banner__navbar {
+    height: 40px;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    margin-top: -4px;
+}
+
+.banner__navbar-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.banner__navbar-list-first .banner__navbar-item {
+    margin-left: 20px;
+}
+
+.banner__navbar-list-child .banner__navbar-item {
+    margin-right: 20px;
+}
+
+.banner__navbar-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.banner__navbar-list-first .banner__navbar-item {
+    position: relative;
+}
+
+.banner__navbar-list-first .banner__navbar-item a::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 0.5px;
+    height: 20px;
+    top: -1px;
+    right: -10px;
+}
+
+.container__header {
+    background-color: rgba(0, 0, 0, 0.05);
+    height: 35px;
+}
+
+.container__header span {
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    padding: 6px 0 0 12px;
+}
+
+.container__content {
+    display: flex;
+    margin-top: 6px;
+}
+
+.container-1 {
+    flex: 1;
+    height: 400px;
+}
+
+.container-1__list {
+    list-style: none;
+    background-color: dodgerblue;
+    padding: 12px 12px 1px 12px;
+    margin: 0;
+    height: 366px;
+}
+
+.container-1__item {
+    margin-bottom: 24px;
+    position: relative;
+    width: 100%;
+}
+
+.container-1__item a {
+    text-decoration: none;
+    color: white;
+}
+
+.container-1__item::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 108%;
+    top: 30px;
+    left: -10px;
+    background-color: blue;
+    position: absolute;
+}
+
+.container-1-2 {
+    margin-top: 6px;
+    height: 306px;
+    padding-left: 0;
+}
+
+.container-1-2__item {
+    list-style: none;
+    padding: 18px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 7.28px;
+}
+
+.container-1-2__item a {
+    text-decoration: none;
+    color: chocolate;
+    padding-left: 16px;
+}
+
+.container-2 {
+    flex: 4;
+}
+
+.container-2-content {
+    display: flex;
+    margin-left: 16px;
+}
+
+.container-2-content img {
+    width: 500px;
+}
+
+.container2-content_msg-title h3 {
+    margin: 0 0 12px 8px;
+    font-size: 24px;
+}
+
+.container2-content_msg-content {
+    margin-left: 8px;
+    line-height: 24px;
+}
+
+.container-2-item-img {
+    margin-top: 16px;
+    display: flex;
+    height: 210px;
+    border: solid 1px black;
+    padding-top: 12px;
+    margin-left: 16px;
+}
+
+.container-2-item-img-item {
+    flex: 1;
+}
+
+.container-2-item-img img {
+    width: 200px;
+    margin-left: 16px;
+}
+
+.container-2-red {
+    height: 100px;
+    background-color: red;
+    margin-left: 16px;
+    margin-top: 12px;
+}
+
+.footer {
+    height: 150px;
+    background-color: dodgerblue;
+    margin-top: 8px;
+}

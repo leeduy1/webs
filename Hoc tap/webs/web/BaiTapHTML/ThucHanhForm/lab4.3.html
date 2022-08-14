@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .form {
+            width: 724px;
+            border: solid 1px black;
+        }
+        
+        .form__body {
+            text-align: center;
+        }
+        
+        .form__group {
+            margin-top: 50px;
+        }
+        
+        .form__input {
+            padding: 14px 350px 14px 16px;
+            font-size: 16px;
+            margin-top: 24px;
+        }
+        
+        .form__paragrap {
+            padding-left: 79px;
+        }
+        
+        p {
+            margin: 0;
+            /* padding-left: 79px; */
+            margin-top: 6px;
+            color: #777;
+        }
+        
+        .form__list--world {
+            /* margin-left: 79px; */
+            width: 557px;
+            height: 40px;
+            margin-top: 28px;
+        }
+        
+        .form__contail {
+            margin-top: 50px;
+        }
+        
+        .form__btn {
+            text-align: center;
+            width: 565px;
+            height: 50px;
+            margin-top: 30px;
+        }
+        
+        .form__btn {
+            background-color: red;
+            border: none;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+        
+        span {
+            color: #0099FF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <div class="form__body">
+            <div class="form__title">
+                <h1 style="font-weight: 200;">Đăng ký</h1>
+            </div>
+            <div class="form__group">
+                <div class="form__group--input">
+                    <input type="text" class="form__input" placeholder="Tên truy cập">
+                </div>
+                <div class="form__group--input">
+                    <input type="text" class="form__input" placeholder="Mật khẩu">
+                </div>
+                <div class="form__group--input">
+                    <input type="text" class="form__input" placeholder="Nhập lại mật khẩu">
+                </div>
+                <div class="form__group--input">
+                    <input type="text" class="form__input" placeholder="Email">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form__paragrap">
+            <p>
+                bạn cần sử dụng email này trong trường hợp đặt lại mật khẩu
+            </p>
+            <div>
+                <input type="text" name="" list="quocgia" class="form__list--world">
+                <datalist id="quocgia" class="form__list--world">
+                    <option value="Việt Nam">
+                    <option value="Hàn Quốc">
+                    <option value="Hoa Kỳ">
+                    <option value="Nhật Bản">
+                </datalist>
+            </div>
+            <div class="form__contail">
+                <input class="form__contail--checkbox" type="checkbox"> Tôi đồng ý với <span> Điều Khoản Dịch Vụ </span>và <span> Chính Sách Bảo Mật</span>
+            </div>
+            <div>
+                <button class="form__btn">Đăng ký Ngay</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

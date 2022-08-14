@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            display: none;
+        }
+        
+        input:focus~ul {
+            display: block;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- <h1>
+        <span>events 1</span>
+    </h1>
+    <h1>
+        <span>events 2</span>
+    </h1>
+    <h1>
+        <span>events 3</span>
+    </h1>
+
+    <script>
+        var h1Elements = document.querySelectorAll('h1');
+        for (var i = 0; i < h1Elements.length; i++) {
+            h1Elements[i].onclick = function(e) {
+                console.log(e.target);
+            }
+        }
+    </script> -->
+    <!-- <input type="text">
+    <input type="checkbox">
+
+    <select name="" id="">
+        <option value="value1">1</option>
+        <option value="value2">2</option>
+        <option value="value3">3</option>
+    </select> -->
+
+
+    <!-- <a href="https://f8.edu.vn">
+        Học lập trình
+    </a>
+    <br>
+    <a href="https://google.com.vn">
+        Tìm kiếm
+    </a> -->
+
+    <!-- <input type="text" placeholder="Tìm kiếm">
+
+    <ul>
+        <li>Javascript</li>
+        <li>PHP</li>
+        <li>Golang</li>
+    </ul> -->
+
+    <div>
+        DIV
+        <button>
+            Click me!
+        </button>
+    </div>
+
+    <script>
+        // var inputValue;
+
+        // var inputElement = document.querySelector('input[type="text"]');
+        // inputElement.oninput = function(e) {
+        //     inputValue = e.target.value;
+        // }
+
+
+        // var checkboxValue;
+
+        // var checkboxElement = document.querySelector('input[type="checkbox"]');
+        // checkboxElement.onchange = function(e) {
+        //     checkboxValue = e.target.checked;
+        // }
+
+
+
+        // var selectValue;
+
+        // var selectElement = document.querySelector('input[type="select"]');
+        // checkboxElement.onchange = function(e) {
+        //     selectValue = e.target.value;
+        // }
+        // var inputValue;
+
+        // var inputElement = document.querySelector('input[type="text"]');
+        // inputElement.onkeyup = function(e) {
+        //     console.log(e.target.value);
+        // }
+
+
+        // 1. prevenDefault and StopPropagation
+
+        // var aElements = document.links;
+        // for (var i = 0; i < aElements.length; ++i) {
+        //     aElements[i].onclick = function(e) {
+        //         if (!e.target.href.startsWith('https://f8.edu.vn')) {
+        //             e.preventDefault();
+        //         }
+        //     }
+        // }
+
+        // var ulElements = document.querySelector('ul');
+
+        // ulElements.onmousedown = function(e) {
+        //     e.preventDefault();
+        // }
+        // ulElements.onclick = function(e) {
+        //     console.log(e.target);
+        // }
+        document.querySelector('div').onclick = function() {
+            console.log('DIV')
+        }
+        document.querySelector('button').onclick = function(e) {
+            e.stopPropagation();
+            console.log('Click me!')
+        }
+    </script>
+</body>
+
+</html>

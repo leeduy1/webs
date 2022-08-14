@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Array.prototype.forEach2 = function(callback) {
+        //     for (var index in this) {
+        //         if (this.hasOwnProperty(index)) {
+        //             callback(this[index], index, this);
+        //         }
+        //     }
+        // }
+
+        // var courses = [
+        //     'Javascript',
+        //     'PHP',
+        // ];
+
+        // courses.forEach2(function(course, index, Array) {
+        //     console.log(course, index, Array);
+        // })
+
+        // filter
+        // var coursesFilter = [{
+        //     name: 'Javascript',
+        //     coin: 680
+        // }, {
+        //     name: 'PHP',
+        //     coin: 860
+        // }, {
+        //     name: 'Ruby',
+        //     coin: 980
+        // }]
+
+        // Array.prototype.filter2 = function(callback) {
+        //     var output = [];
+        //     for (var index in this) {
+        //         if (this.hasOwnProperty(index)) {
+        //             var result = callback(this[index], index, this);
+        //             if (result) {
+        //                 output.push(this[index]);
+        //             }
+        //         }
+        //     }
+        //     return output
+        // }
+
+        // var filterCouse = coursesFilter.filter2(function(course, index, Array) {
+        //     return course.coin > 700;
+        // });
+        // console.log(filterCouse);
+
+        // some: true/ false
+        // toi thieu 1 phan tu thoa mn tra ve true
+        // var courseSome = [{
+        //     name: 'Javascript',
+        //     coin: 680,
+        //     isFinish: true,
+        // }, {
+        //     name: 'PHP',
+        //     coin: 860,
+        //     isFinish: false
+        // }, {
+        //     name: 'Ruby',
+        //     coin: 980,
+        //     isFinish: false
+        // }]
+
+        // Array.prototype.some2 = function(callback) {
+        //     for (var index in courseSome) {
+        //         if (this.hasOwnProperty(index)) {
+        //             if (callback(this[index], index, this)) {
+        //                 return true;
+        //             }
+        //         }
+        //     }
+        //     return false;
+        // }
+
+        // var result = courseSome.some2(function(course, index, Array) {
+        //     return course.isFinish;
+        // });
+        // console.log(result)
+
+
+        var courseEvery = [{
+            name: 'Javascript',
+            coin: 680,
+            isFinish: true,
+        }, {
+            name: 'PHP',
+            coin: 860,
+            isFinish: true,
+        }, {
+            name: 'Ruby',
+            coin: 980,
+            isFinish: true
+        }]
+
+        Array.prototype.every2 = function(callback) {
+            var output = true;
+            for (var index in courseEvery) {
+                if (this.hasOwnProperty(index)) {
+                    var result = callback(this[index], index, this);
+                    if (!result) {
+                        output = false;
+                        break;
+                    }
+                }
+            }
+            return output;
+        }
+        var result = courseEvery.every2(function(course, index, Array) {
+            return course.isFinish === true;
+        });
+        console.log(result)
+    </script>
+</body>
+
+</html>
